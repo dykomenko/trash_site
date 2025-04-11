@@ -8,8 +8,13 @@
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400..900&display=swap&family=Roboto+Condensed:wght@100..900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400..900&display=swap&family=Roboto+Condensed:wght@100..900&display=swap"
     rel="stylesheet">
+
+
+  <!-- LightGallery CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
 
 
   <link rel="stylesheet" href="css/style.css">
@@ -157,7 +162,8 @@
             <div class="checkbox" onclick="this.querySelector('input').click()">
               <input required type="checkbox"> </checkbox>
               <span>
-                Я согласен на <a target="_blank" href="policy.html">обработку персональных данных </a> и с <a target="_blank" href="agree.html">
+                Я согласен на <a target="_blank" href="policy.html">обработку персональных данных </a> и с <a
+                  target="_blank" href="agree.html">
                   условиями пользовательского соглашения</a>
               </span>
             </div>
@@ -171,57 +177,110 @@
     </div>
   </section>
 
-<section id="price">
-  <div class="container">
-    <h2>ЦЕНЫ НА ВЫВОЗ МУСОРА
-    </h2>
-    <div class="desc">При заказе услуг грузчиков на сумму от 5000 ₽ мы подарим Вам 10 прочных и вместительных мешков для мусора
+  <section id="price">
+    <div class="container">
+      <h2>ЦЕНЫ НА ВЫВОЗ МУСОРА
+      </h2>
+      <div class="desc">При заказе услуг грузчиков на сумму от 5000 ₽ мы подарим Вам 10 прочных и вместительных мешков
+        для мусора
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-header">Машина</div>
+        <div class="grid-header">Объём</div>
+        <div class="grid-header">Вес</div>
+        <div class="grid-header">Время на погрузку</div>
+        <div class="grid-header">Цена за машину</div>
+
+        <div class="grid-item">ГАЗель</div>
+        <div class="grid-item">3 куб.</div>
+        <div class="grid-item">1 т</div>
+        <div class="grid-item">30 мин</div>
+        <div class="grid-item">3 500Р</div>
+
+        <div class="grid-item">ГАЗель</div>
+        <div class="grid-item">6 куб.</div>
+        <div class="grid-item">1,5 т</div>
+        <div class="grid-item">40 мин</div>
+        <div class="grid-item">4 500Р</div>
+
+        <div class="grid-item">ГАЗель</div>
+        <div class="grid-item">10 куб.</div>
+        <div class="grid-item">2 т</div>
+        <div class="grid-item">40 мин</div>
+        <div class="grid-item">6 500Р</div>
+
+        <div class="grid-item">КАМАЗ/Самосвал</div>
+        <div class="grid-item">10 куб.</div>
+        <div class="grid-item">15 т</div>
+        <div class="grid-item">1,5ч</div>
+        <div class="grid-item">9 000Р</div>
+
+        <div class="grid-item">КАМАЗ/Самосвал</div>
+        <div class="grid-item">12,5 куб.</div>
+        <div class="grid-item">15 т</div>
+        <div class="grid-item">2ч</div>
+        <div class="grid-item">9 500Р</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div id="lightgallery" class="gallery">
+
+        <div class=""  data-src="https://dummyimage.com/1400x933/ccc/000.png&text=Big+Image">
+          <img src="https://dummyimage.com/1400x933/ccc/000.png&text=Big+Image" />
+        </div>
+
+        <div class="tall" data-src="https://dummyimage.com/700x933/aaa/000.png&text=Tall+Right">
+          <img src="https://dummyimage.com/1400x933/aaa/000.png&text=Tall+Right" />
+        </div>
+
+        <div class="tall"  data-src="https://dummyimage.com/700x466/99c/000.png&text=Small+Left+1">
+          <img src="https://dummyimage.com/1400x933/99c/000.png&text=Small+Left+1" />
+        </div>
+
+        <div  data-src="https://dummyimage.com/700x466/669/fff.png&text=Small+Left+2">
+          <img src="https://dummyimage.com/1400x933/669/fff.png&text=Small+Left+2" />
+        </div>
+
+        <div class=""  data-src="https://dummyimage.com/700x466/fc0/000.png&text=Wide+Bottom">
+          <img src="https://dummyimage.com/1400x933/fc0/000.png&text=Wide+Bottom" />
+        </div>
+
+        <div class="tall"  data-src="https://dummyimage.com/700x466/fc0/000.png&text=Wide+Bottom">
+          <img src="https://dummyimage.com/1400x933/fed/000.png&text=Wide+Bottom" />
+        </div>
+
+      </div>
     </div>
 
-    <div class="grid-container">
-      <div class="grid-header">Машина</div>
-      <div class="grid-header">Объём</div>
-      <div class="grid-header">Вес</div>
-      <div class="grid-header">Время на погрузку</div>
-      <div class="grid-header">Цена за машину</div>
-      
-      <div class="grid-item">ГАЗель</div>
-      <div class="grid-item">3 куб.</div>
-      <div class="grid-item">1 т</div>
-      <div class="grid-item">30 мин</div>
-      <div class="grid-item">3 500Р</div>
-      
-      <div class="grid-item">ГАЗель</div>
-      <div class="grid-item">6 куб.</div>
-      <div class="grid-item">1,5 т</div>
-      <div class="grid-item">40 мин</div>
-      <div class="grid-item">4 500Р</div>
-      
-      <div class="grid-item">ГАЗель</div>
-      <div class="grid-item">10 куб.</div>
-      <div class="grid-item">2 т</div>
-      <div class="grid-item">40 мин</div>
-      <div class="grid-item">6 500Р</div>
-      
-      <div class="grid-item">КАМАЗ/Самосвал</div>
-      <div class="grid-item">10 куб.</div>
-      <div class="grid-item">15 т</div>
-      <div class="grid-item">1,5ч</div>
-      <div class="grid-item">9 000Р</div>
-      
-      <div class="grid-item">КАМАЗ/Самосвал</div>
-      <div class="grid-item">12,5 куб.</div>
-      <div class="grid-item">15 т</div>
-      <div class="grid-item">2ч</div>
-      <div class="grid-item">9 500Р</div>
+
+  </section>
+
+  <section id="auto">
+    <div class="container">
+      <h2>Наш автопарк</h2>
+      <div class="fleet">
+        <div class="card">
+          <img src="https://dummyimage.com/1340x1180?text=ПУХТО" alt="ПУХТО">
+          <h3>ПУХТО</h3>
+          <p>Аренда ПУХТО является очень выгодным решением с экономической точки зрения для предприятий, у которых строительная, производственная или иная деятельность сопровождается образованием определенного количества отходов.</p>
+          <div class="info">от 6 до 27 кубов</div>
+          <a class="button" href="#">Заказать</a>
+        </div>
+        <div class="card">
+          <img src="https://dummyimage.com/1340x1180?text=ГАЗЕЛЬ" alt="ГАЗЕЛЬ">
+          <h3>ГАЗЕЛЬ</h3>
+          <p>Почему мы используем Газель? Это касается густо застроенных многоэтажками районов, остро стоит проблема подъезда к дому габаритного транспорта. Также движение по городу несколько затруднено для крупных грузовых автомашин.</p>
+          <div class="info">3 метра / 1,5 тонны</div>
+          <a class="button" href="#">Заказать</a>
+        </div>
+      </div>
     </div>
-
-  </div>
-</section>
-
-
-
-
+  </section>
 
 
 
@@ -249,6 +308,21 @@
   <div class="uSocial-PP" data-action="load" data-pid="24d4b186eeeda9f1a559a7e8250f97ca" data-type="publicpopup"
     data-options="skin_dark,style1,showWithoutNames_1" data-social="telegram,vk,fb,twi,ok,mail"></div>
   <!-- /uSocial -->
+
+
+  <!-- LightGallery JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+  <script>
+    lightGallery(document.getElementById('lightgallery'), {
+      plugins: [lgZoom, lgThumbnail],
+      speed: 400,
+    });
+  </script>
+
+
 </body>
 
 </html>
