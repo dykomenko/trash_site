@@ -352,3 +352,40 @@ select::-ms-expand {
 .button{
   cursor: pointer
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background-color: #ddd;
+  padding: 1px;
+}
+.grid-header, .grid-item {
+  background-color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.grid-header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+.grid-container > div:nth-of-type(10n+1),
+.grid-container > div:nth-of-type(10n+2),
+.grid-container > div:nth-of-type(10n+3),
+.grid-container > div:nth-of-type(10n+4),
+.grid-container > div:nth-of-type(10n+5) {
+  background-color: #f9f9f9;
+}
+
+#price h2, #price .desc{
+  text-align: center;
+}
+#price .desc{
+  margin: 20px auto 40px;
+  max-width: 40em;
+  font-size: 21px;
+}
+#price{
+  background-color: #f5f7f9;
+}
