@@ -450,3 +450,24 @@ margin: 0 0 20px;
   font-weight: bold;
   margin-bottom: 1.5em;
 }
+
+
+.steps4 .step{
+  flex-basis: 220px;
+}
+
+.num {
+  background: #0a4b9b;
+  color: white;
+  font-size: 60px;
+  width: min-content;
+  padding: 10px 40px 0px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'ROBOTO CONDENSED';
+  margin: 0 auto;
+}
+#howwework .steps{
+  margin-top: 40px;
+}
