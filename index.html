@@ -26,15 +26,33 @@
   <header>
     <div class="nav-container">
       <div class="logo">VARA GROUP</div>
-      <nav>
-        <a href="#">Услуги</a>
-        <a href="#">Прайс</a>
-        <a href="#">Галерея</a>
-        <a href="#">Автопарк</a>
-        <a href="#">Вопрос-ответ</a>
-        <a href="#">Контакты</a>
+      <nav class="nav-links">
+        <a href="#service">Услуги</a>
+        <a href="#price">Прайс</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#auto">Автопарк</a>
+        <a href="#faq">Вопрос-ответ</a>
+        <a href="#contact">Контакты</a>
       </nav>
-      <button class="consult-btn">Консультация</button>
+      <a class="consult-btn modal">Консультация</a>
+  
+      <!-- Бургер-кнопка -->
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+      <a href="#service">Услуги</a>
+      <a href="#price">Прайс</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#auto">Автопарк</a>
+      <a href="#faq">Вопрос-ответ</a>
+      <a href="#contact">Контакты</a>
+      <a class="consult-btn modal">Консультация</a>
     </div>
   </header>
 
@@ -46,7 +64,7 @@
         <div class="col">
           <p>Поможем вывезти и утилизировать отходы. Работаем с физическими и юридическими лицами на разовой или
             постоянной основе.</p>
-          <a href="#" class="button">Вывезти мусор</a>
+          <a href="#" class="button modal">Вывезти мусор</a>
         </div>
         <div class="col f-22">
           <ul>
@@ -82,7 +100,7 @@
             <li>Перевозится на грузовой машине и устанавливается на заранее заготовленный участок
             </li>
           </ul>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button modal">Заказать</a>
         </div>
       </div>
 
@@ -101,7 +119,7 @@
               картонная, бумажная упаковка, стеклянная тара
             </li>
           </ul>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button modal">Заказать</a>
         </div>
         <div class="col img"><img src="images/gaz.png" alt="Вывоз мусора газелью"></div>
 
@@ -151,7 +169,7 @@
         </div>
 
         <div class="col">
-          <form action="">
+          <form class="ajax-form" action="">
             <div class="arrow">></div>
             <select name="car" id="">
               <option value="Пухто">Пухто</option>
@@ -167,7 +185,7 @@
                   условиями пользовательского соглашения</a>
               </span>
             </div>
-            <div href="#" class="button">Отправить</div>
+            <input href="#" type="submit" value="Отправить" class="button"></input>
           </form>
         </div>
 
@@ -230,28 +248,28 @@
     <div class="container">
       <div id="lightgallery" class="gallery">
 
-        <div class=""  data-src="https://dummyimage.com/1400x933/ccc/000.png&text=Big+Image">
-          <img src="https://dummyimage.com/1400x933/ccc/000.png&text=Big+Image" />
+        <div class="" data-src="images/gallery/1.jpg">
+          <img src="images/gallery/1.jpg" />
         </div>
 
-        <div class="tall" data-src="https://dummyimage.com/700x933/aaa/000.png&text=Tall+Right">
-          <img src="https://dummyimage.com/1400x933/aaa/000.png&text=Tall+Right" />
+        <div class="tall" data-src="images/gallery/2.jpg">
+          <img src="images/gallery/2.jpg" />
         </div>
 
-        <div class="tall"  data-src="https://dummyimage.com/700x466/99c/000.png&text=Small+Left+1">
-          <img src="https://dummyimage.com/1400x933/99c/000.png&text=Small+Left+1" />
+        <div class="tall" data-src="images/gallery/3.jpg">
+          <img src="images/gallery/3.jpg" />
         </div>
 
-        <div  data-src="https://dummyimage.com/700x466/669/fff.png&text=Small+Left+2">
-          <img src="https://dummyimage.com/1400x933/669/fff.png&text=Small+Left+2" />
+        <div data-src="images/gallery/4.jpg">
+          <img src="images/gallery/4.jpg" />
         </div>
 
-        <div class=""  data-src="https://dummyimage.com/700x466/fc0/000.png&text=Wide+Bottom">
-          <img src="https://dummyimage.com/1400x933/fc0/000.png&text=Wide+Bottom" />
+        <div class="" data-src="images/gallery/5.jpg">
+          <img src="images/gallery/5.jpg" />
         </div>
 
-        <div class="tall"  data-src="https://dummyimage.com/700x466/fc0/000.png&text=Wide+Bottom">
-          <img src="https://dummyimage.com/1400x933/fed/000.png&text=Wide+Bottom" />
+        <div class="tall" data-src="images/gallery/6.jpg">
+          <img src="images/gallery/6.jpg" />
         </div>
 
       </div>
@@ -265,60 +283,129 @@
       <h2>Наш автопарк</h2>
       <div class="fleet">
         <div class="card">
-          <img src="https://dummyimage.com/1340x1180?text=ПУХТО" alt="ПУХТО">
+          <img src="images/puh1.jpg" alt="ПУХТО">
           <h3>ПУХТО</h3>
-          <p>Аренда ПУХТО является очень выгодным решением с экономической точки зрения для предприятий, у которых строительная, производственная или иная деятельность сопровождается образованием определенного количества отходов.</p>
+          <p>Аренда ПУХТО является очень выгодным решением с экономической точки зрения для предприятий, у которых
+            строительная, производственная или иная деятельность сопровождается образованием определенного количества
+            отходов.</p>
           <div class="info">от 6 до 27 кубов</div>
-          <a class="button" href="#">Заказать</a>
+          <a class="button modal" href="#">Заказать</a>
         </div>
         <div class="card">
-          <img src="https://dummyimage.com/1340x1180?text=ГАЗЕЛЬ" alt="ГАЗЕЛЬ">
+          <img src="images/gaz.jpg" alt="ГАЗЕЛЬ">
           <h3>ГАЗЕЛЬ</h3>
-          <p>Почему мы используем Газель? Это касается густо застроенных многоэтажками районов, остро стоит проблема подъезда к дому габаритного транспорта. Также движение по городу несколько затруднено для крупных грузовых автомашин.</p>
+          <p>Почему мы используем Газель? Это касается густо застроенных многоэтажками районов, остро стоит проблема
+            подъезда к дому габаритного транспорта. Также движение по городу несколько затруднено для крупных грузовых
+            автомашин.</p>
           <div class="info">3 метра / 1,5 тонны</div>
-          <a class="button" href="#">Заказать</a>
+          <a class="button modal" href="#">Заказать</a>
         </div>
       </div>
     </div>
   </section>
 
-<section id="howwework">
-  <div class="container">
-    <h2 class="t-center">Как мы работаем</h2>
+  <section id="howwework">
+    <div class="container">
+      <h2 class="t-center">Как мы работаем</h2>
 
 
-    <div class="steps steps4">
-      <div class="step">
+      <div class="steps steps4">
+        <div class="step">
           <div class="num">1</div>
-        <div class="title">Заявка</div>
-        <p>Время обработки заявки - 10 минут
-        </p>
+          <div class="title">Заявка</div>
+          <p>Время обработки заявки - 10 минут
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div class="title">Транспорт</div>
+          <p>
+            Подберём подходящий вам вариант транспорта
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div class="title">Оплата</div>
+          <p>
+            Оплата вашего заказа. Работаем по предоплате.
+          </p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div class="title">Вывоз мусора</div>
+          <p>
+            Вывозим мусор на переработку или полигон
+          </p>
+        </div>
       </div>
-      <div class="step">
-        <div class="num">2</div>
-        <div class="title">Транспорт</div>
-        <p>
-          Подберём подходящий вам вариант транспорта
-        </p>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <div class="title">Оплата</div>
-        <p>
-          Оплата вашего заказа. Работаем по предоплате.
-        </p>
-      </div>
-      <div class="step">
-        <div class="num">4</div>
-        <div class="title">Вывоз мусора</div>
-        <p>
-          Вывозим мусор на переработку или полигон
-        </p>
+      <a href="#" class="button modal">Заказать вывоз мусора</a>
+    </div>
+  </section>
+
+
+  <section id="faq">
+    <div class="container">
+      <h2>ВОПРОСЫ И ОТВЕТЫ</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Через какое время после оформления заказа приедет машина?</summary>
+          <p>Время подачи машины 1,5 – 2 часа с момента оформления заявки.</p>
+        </details>
+
+        <details>
+          <summary>Работаем ли мы в выходные и праздничные дни?</summary>
+          <p>Заявки принимаются с 9:00 до 23:00. Вывоз осуществляется круглосуточно, без выходных и праздничных дней.
+          </p>
+        </details>
+
+        <details>
+          <summary>Выполняете ли Вы погрузочные работы?</summary>
+          <p>Да, при необходимости погрузки Газели или 8ми кубового контейнера, с машиной предоставляются два грузчика.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нужно вывезти старую мебель, какая машина мне нужна?</summary>
+          <p>Для транспортировки старой мебели применяется малогрузовой транспорт – Газель с весом загрузки до 1,5 тонн.
+          </p>
+        </details>
       </div>
     </div>
-    <a href="#" class="button">Заказать вывоз мусора</a>
-  </div>
-</section>
+  </section>
+
+
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="t-center">Контакты</h2>
+      <div class="desc f-22 t-center">Работаем без выходных в 23 городах Москвы и Московской области
+      </div>
+
+      <div class="iframe_fix">
+        <iframe width="1200" height="550"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=38.13242912292481%2C55.5898903225584%2C38.18907737731934%2C55.61146866869343&amp;layer=mapnik&amp;marker=55.600680979255095%2C38.16075325012207"></iframe>
+      </div>
+
+      <div class="contacts">
+        <a target="_blank" href="tel:+79641111111" class="phone">
+          +7(123)-456-78-90
+        </a>
+
+
+        <a target="_blank"
+          href="https://www.openstreetmap.org/export/embed.html?bbox=38.13242912292481%2C55.5898903225584%2C38.18907737731934%2C55.61146866869343&layer=mapnik&marker=55.600680979255095%2C38.16075325012207"
+          class="location">
+          г. Москва, ул. Тверская, дом. 1
+        </a>
+
+        <a target="_blank" href="mailto:test@test.ru" class="email">
+          support@ukit.com
+        </a>
+      </div>
+
+    </div>
+  </section>
 
 
 
@@ -346,6 +433,22 @@
   <!-- /uSocial -->
 
 
+
+  <!-- Попап -->
+  <div id="popupOverlay" class="popup-overlay" style="display: none;">
+    <div class="popup" id="popup">
+      <button class="close-btn" id="closePopupBtn">×</button>
+      <p class="title">Получить<br>консультацию</p>
+      <form class="ajax-form">
+        <input type="text" placeholder="Телефон" required>
+        <input type="email" placeholder="E-mail (необязательно)">
+        <textarea placeholder="Ваше сообщение"></textarea>
+        <input class="button" type="submit" value="Отправить"></input>
+      </form>
+    </div>
+  </div>
+
+
   <!-- LightGallery JS -->
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
@@ -358,6 +461,90 @@
     });
   </script>
 
+  <script>
+    const openBtn = document.getElementById('openPopupBtn');
+    const closeBtn = document.getElementById('closePopupBtn');
+    const overlay = document.getElementById('popupOverlay');
+    const popup = document.getElementById('popup');
+
+    openBtn.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // const overlay = document.getElementById('overlay');
+
+      // Открытие модального окна и установка data-target
+      document.querySelectorAll('a.modal').forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          overlay.style.display = 'flex';
+
+          const targetValue = this.getAttribute('data-target');
+          overlay.querySelectorAll('form').forEach(form => {
+            form.setAttribute('data-target', targetValue);
+          });
+        });
+      });
+
+      // Обработка отправки форм
+      document.querySelectorAll('form.ajax-form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+          // Добавим также data-target, если он есть
+          const target = form.getAttribute('data-target');
+          if (target) {
+            formData.append('data-target', target);
+          }
+
+          fetch('send.php', {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => response.text())
+            .then(html => {
+              form.innerHTML = html;
+            })
+            .catch(error => {
+              form.innerHTML = '<p>Произошла ошибка при отправке формы.</p>';
+              console.error(error);
+            });
+        });
+      });
+    });
+  </script>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const menuLinks = mobileMenu.querySelectorAll('a');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      burger.classList.remove('active');
+    });
+  });
+</script>
 
 </body>
 
