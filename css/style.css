@@ -471,6 +471,8 @@ select::-ms-expand {
   gap: 1px;
   background-color: #ddd;
   padding: 1px;
+  min-width: 100%;
+  overflow: scroll;
 }
 
 .grid-header,
@@ -825,5 +827,8 @@ iframe {
   }
   .step:before{
     display: none
+  }
+  #contact .iframe_fix:after{
+    height: 40px;
   }
 }

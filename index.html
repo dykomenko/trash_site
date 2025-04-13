@@ -34,7 +34,7 @@
         <a href="#faq">Вопрос-ответ</a>
         <a href="#contact">Контакты</a>
       </nav>
-      <a class="consult-btn modal">Консультация</a>
+      <a class="consult-btn modal" data-target="Кнопка в шапке">Консультация</a>
   
       <!-- Бургер-кнопка -->
       <div class="burger">
@@ -52,7 +52,7 @@
       <a href="#auto">Автопарк</a>
       <a href="#faq">Вопрос-ответ</a>
       <a href="#contact">Контакты</a>
-      <a class="consult-btn modal">Консультация</a>
+      <a class="consult-btn modal" data-target="Кнопка в шапке, мобильная">Консультация</a>
     </div>
   </header>
 
@@ -64,7 +64,7 @@
         <div class="col">
           <p>Поможем вывезти и утилизировать отходы. Работаем с физическими и юридическими лицами на разовой или
             постоянной основе.</p>
-          <a href="#" class="button modal">Вывезти мусор</a>
+          <a href="#" class="button modal" data-target="Кнопка первого экрана">Вывезти мусор</a>
         </div>
         <div class="col f-22">
           <ul>
@@ -100,7 +100,7 @@
             <li>Перевозится на грузовой машине и устанавливается на заранее заготовленный участок
             </li>
           </ul>
-          <a href="#" class="button modal">Заказать</a>
+          <a href="#" class="button modal" data-target="Пухто. Второй экран">Заказать</a>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
               картонная, бумажная упаковка, стеклянная тара
             </li>
           </ul>
-          <a href="#" class="button modal">Заказать</a>
+          <a href="#" class="button modal" data-target="Газель. Второй экран">Заказать</a>
         </div>
         <div class="col img"><img src="images/gaz.png" alt="Вывоз мусора газелью"></div>
 
@@ -185,7 +185,7 @@
                   условиями пользовательского соглашения</a>
               </span>
             </div>
-            <input href="#" type="submit" value="Отправить" class="button"></input>
+            <input href="#" type="submit" value="Отправить"  class="button"></input>
           </form>
         </div>
 
@@ -289,7 +289,7 @@
             строительная, производственная или иная деятельность сопровождается образованием определенного количества
             отходов.</p>
           <div class="info">от 6 до 27 кубов</div>
-          <a class="button modal" href="#">Заказать</a>
+          <a class="button modal" data-target="Пухто. Автопарк" href="#">Заказать</a>
         </div>
         <div class="card">
           <img src="images/gaz.jpg" alt="ГАЗЕЛЬ">
@@ -298,7 +298,7 @@
             подъезда к дому габаритного транспорта. Также движение по городу несколько затруднено для крупных грузовых
             автомашин.</p>
           <div class="info">3 метра / 1,5 тонны</div>
-          <a class="button modal" href="#">Заказать</a>
+          <a class="button modal" data-target="Газель. Автопарк" href="#">Заказать</a>
         </div>
       </div>
     </div>
@@ -338,7 +338,7 @@
           </p>
         </div>
       </div>
-      <a href="#" class="button modal">Заказать вывоз мусора</a>
+      <a href="#" class="button modal" data-target="Заказать вывоз мусора. Как мы работаем">Заказать вывоз мусора</a>
     </div>
   </section>
 
@@ -440,9 +440,9 @@
       <button class="close-btn" id="closePopupBtn">×</button>
       <p class="title">Получить<br>консультацию</p>
       <form class="ajax-form">
-        <input type="text" placeholder="Телефон" required>
-        <input type="email" placeholder="E-mail (необязательно)">
-        <textarea placeholder="Ваше сообщение"></textarea>
+        <input type="text" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="E-mail (необязательно)">
+        <textarea name="comment" placeholder="Ваше сообщение"></textarea>
         <input class="button" type="submit" value="Отправить"></input>
       </form>
     </div>
@@ -462,14 +462,14 @@
   </script>
 
   <script>
-    const openBtn = document.getElementById('openPopupBtn');
+    // const openBtn = document.getElementById('openPopupBtn');
     const closeBtn = document.getElementById('closePopupBtn');
     const overlay = document.getElementById('popupOverlay');
     const popup = document.getElementById('popup');
 
-    openBtn.addEventListener('click', () => {
-      overlay.style.display = 'flex';
-    });
+    // openBtn.addEventListener('click', () => {
+    //   overlay.style.display = 'flex';
+    // });
 
     closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none';
@@ -493,7 +493,8 @@
           overlay.style.display = 'flex';
 
           const targetValue = this.getAttribute('data-target');
-          overlay.querySelectorAll('form').forEach(form => {
+          // overlay.querySelectorAll('form').forEach(form => {
+          overlay.querySelectorAll('#popupOverlay form').forEach(form => {
             form.setAttribute('data-target', targetValue);
           });
         });
@@ -510,7 +511,7 @@
           if (target) {
             formData.append('data-target', target);
           }
-
+          console.log(formData);
           fetch('send.php', {
             method: 'POST',
             body: formData
