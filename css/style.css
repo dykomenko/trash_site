@@ -805,6 +805,14 @@ iframe {
   margin-bottom: 25px;
   line-height: 120%;
 }
+.pconly, .mob-only{
+  display: none;
+}
+@media (min-width: 768px) {
+  .pconly{
+    display: block;
+  }
+}
 
 @media (max-width: 768px) {
   .row {
@@ -830,5 +838,11 @@ iframe {
   }
   #contact .iframe_fix:after{
     height: 40px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  .mob-only{
+    display: block;
   }
 }

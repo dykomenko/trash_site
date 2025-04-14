@@ -3,7 +3,7 @@
 
 // Адрес получателя
 $to = 'infohimedia@ya.ru';
-$to = 'legionerx14@yandex.ru';
+// $to = 'legionerx14@yandex.ru';
 
 // Тема письма
 $subject = 'Новая заявка с формы';
